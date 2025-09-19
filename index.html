@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Timer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>⏱ Advanced Timer</h1>
+  <button class="toggle" onclick="toggleDarkMode()">🌙 Dark/Light Mode</button>
+
+  <div class="container">
+    <h2 id="modeTitle">Stopwatch Mode</h2>
+    <div id="display">00:00:00</div>
+
+    <div id="countdownInput" style="display: none;">
+      <input type="number" id="minutes" placeholder="Minutes" min="0">
+      <input type="number" id="seconds" placeholder="Seconds" min="0" max="59">
+      <button class="start" onclick="setCountdown()">Set Time</button>
+    </div>
+
+    <div class="button-group">
+      <button class="start" onclick="start()">Start</button>
+      <button class="pause" onclick="pause()">Pause</button>
+      <button class="reset" onclick="reset()">Reset</button>
+      <button class="lap" onclick="lap()">Lap</button>
+      <button class="mode" onclick="switchMode()">Switch Mode</button>
+    </div>
+
+    <ul id="laps"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
